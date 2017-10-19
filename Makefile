@@ -14,7 +14,7 @@ PKG_VERSION:=1.2.1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/gdwgi1225/shadowsocks-libev
-PKG_SOURCE_VERSION:=11db1d5e48f539855ea1a66947eba9bb9bc82150
+PKG_SOURCE_VERSION:=151b33985c99cc67ce91b5b9f05b49c3c47513f7
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
@@ -40,7 +40,7 @@ define Package/openwrt-ssr/Default
 	TITLE:=shadowsocksR-libev LuCI interface
 	URL:=https://github.com/gdwgi1225/openwrt-ssr
 	VARIANT:=$(1)
-	DEPENDS:=$(3)	
+	DEPENDS:=$(3)
 	PKGARCH:=all
 endef
 
@@ -67,9 +67,9 @@ if [ -z "$${IPKG_INSTROOT}" ]; then
      /etc/init.d/shadowsocksr disable
      /etc/init.d/shadowsocksr stop
     echo "Removing firewall rule for shadowsocksr"
-	  uci -q batch <<-EOF >/dev/null
-		delete firewall.shadowsocksr
-		commit firewall
+    uci -q batch <<-EOF >/dev/null
+    delete firewall.shadowsocksr
+    commit firewall
 EOF
 if [ "$(1)" = "GFW" ] ;then
 sed -i '/conf-dir/d' /etc/dnsmasq.conf 
@@ -150,8 +150,8 @@ define Package/openwrt-ssr/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-redir $(1)/usr/bin/ssr-redir
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-tunnel $(1)/usr/bin/ssr-tunnel
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-local $(1)/usr/bin/ssr-local	
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-server $(1)/usr/bin/ssr-server		
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-local $(1)/usr/bin/ssr-local
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-server $(1)/usr/bin/ssr-server
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-check $(1)/usr/bin/ssr-check
 	$(INSTALL_BIN) ./files/shadowsocksr.rule $(1)/usr/bin/ssr-rules
 	$(INSTALL_BIN) ./files/shadowsocksr.monitor $(1)/usr/bin/ssr-monitor
@@ -159,7 +159,7 @@ define Package/openwrt-ssr/install
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_DATA) ./files/shadowsocksr.config $(1)/etc/config/shadowsocksr
 	$(INSTALL_DIR) $(1)/etc
-	$(INSTALL_DATA) ./files/china_ssr.txt $(1)/etc/china_ssr.txt	
+	$(INSTALL_DATA) ./files/china_ssr.txt $(1)/etc/china_ssr.txt
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/shadowsocksr.init $(1)/etc/init.d/shadowsocksr
 endef
@@ -188,7 +188,7 @@ define Package/luci-app-shadowsocksR-Client/install
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_DATA) ./files/shadowsocksr.config $(1)/etc/config/shadowsocksr
 	$(INSTALL_DIR) $(1)/etc
-	$(INSTALL_DATA) ./files/china_ssr.txt $(1)/etc/china_ssr.txt	
+	$(INSTALL_DATA) ./files/china_ssr.txt $(1)/etc/china_ssr.txt
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/shadowsocksr.init $(1)/etc/init.d/shadowsocksr
 endef
@@ -205,7 +205,7 @@ define Package/luci-app-shadowsocksR-Server/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(INSTALL_BIN) ./files/root/etc/uci-defaults/luci-shadowsocksr $(1)/etc/uci-defaults/luci-shadowsocksr
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-server $(1)/usr/bin/ssr-server		
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-server $(1)/usr/bin/ssr-server
 	$(INSTALL_BIN) ./files/shadowsocksr.rule $(1)/usr/bin/ssr-rules
 	$(INSTALL_BIN) ./files/shadowsocksr.monitor $(1)/usr/bin/ssr-monitor
 	$(INSTALL_DIR) $(1)/etc/config
@@ -228,8 +228,8 @@ define Package/luci-app-shadowsocksR-GFW/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-redir $(1)/usr/bin/ssr-redir
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-tunnel $(1)/usr/bin/ssr-tunnel
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-local $(1)/usr/bin/ssr-local	
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-server $(1)/usr/bin/ssr-server		
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-local $(1)/usr/bin/ssr-local
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-server $(1)/usr/bin/ssr-server
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/ss-check $(1)/usr/bin/ssr-check
 	$(INSTALL_BIN) ./files/shadowsocksr.rule $(1)/usr/bin/ssr-rules
 	$(INSTALL_BIN) ./files/shadowsocksr.monitor $(1)/usr/bin/ssr-monitor
@@ -240,7 +240,7 @@ define Package/luci-app-shadowsocksR-GFW/install
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_DATA) ./files/shadowsocksr.config $(1)/etc/config/shadowsocksr
 	$(INSTALL_DIR) $(1)/etc
-	$(INSTALL_DATA) ./files/china_ssr.txt $(1)/etc/china_ssr.txt	
+	$(INSTALL_DATA) ./files/china_ssr.txt $(1)/etc/china_ssr.txt
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/shadowsocksr.init $(1)/etc/init.d/shadowsocksr
 endef
