@@ -49,6 +49,13 @@ ShadowsocksR-libev for OpenWrt
 
 如果在IP路由模式下代理正常，在GFW列表模式下无法正常访问，请检查DNS解析是否正确（服务器是否开启UDP转发、是否有其他dns软件冲突等）
 
+可选依赖               | 作用
+-------------------|--------------------
+`dnsmasq-full`     | DNS 域名污染列表解析
+`curl`             | 获取 DNS 域名污染列表和服务器订阅数据
+`coreutils-base64` | base64 解码 DNS 域名污染列表和服务器订阅数据
+`bash`             | 服务器订阅脚本使用 bash 解释器运行
+
 编译
 ---
 

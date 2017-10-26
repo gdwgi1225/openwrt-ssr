@@ -1,4 +1,4 @@
--- Copyright (C) 2017 yushi studio <ywb94@qq.com>
+-- Copyright (C) 2017 yushi studio <gdwgi1225@qq.com>
 -- Licensed to the public under the GNU General Public License v3.
 
 local IPK_Version="1.2.1"
@@ -15,7 +15,7 @@ local ip_count=0
 local gfwmode=0
 
 if nixio.fs.access("/etc/dnsmasq.ssr/gfw_list.conf") then
-gfwmode=1		
+gfwmode=1
 end
 
 local shadowsocksr = "shadowsocksr"
@@ -177,7 +177,7 @@ s.value =kcptun_version
 
 s=m:field(DummyValue,"project",translate("Project")) 
 s.rawhtml  = true
-s.value =bold_on .. [[<a href="]] .. "https://github.com/ywb94/openwrt-ssr" .. [[" >]]
-	.. "https://github.com/ywb94/openwrt-ssr" .. [[</a>]] .. bold_off
-	
+s.value =bold_on .. [[<a href="]] .. "https://github.com/gdwgi1225/openwrt-ssr" .. [[" >]]
+	.. "https://github.com/gdwgi1225/openwrt-ssr" .. [[</a>]] .. bold_off
+
 return m

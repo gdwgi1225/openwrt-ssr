@@ -31,6 +31,24 @@ msgstr "UDP中继服务器"
 msgid "Same as Global Server"
 msgstr "与全局服务器相同"
 
+msgid "Server subscription"
+msgstr "服务器订阅"
+
+msgid "Auto Update"
+msgstr "自动更新"
+
+msgid "Through proxy update"
+msgstr "通过代理更新"
+
+msgid "Update time (every day)"
+msgstr "更新时间 （每天）"
+
+msgid "Subscribe URL"
+msgstr "订阅链接"
+
+msgid "Update"
+msgstr "更新"
+
 msgid "Servers Setting"
 msgstr "服务器配置"
 
@@ -84,6 +102,9 @@ msgstr "接口 - WAN"
 
 msgid "Bypassed IP List"
 msgstr "被忽略IP列表"
+
+msgid "ChinaDNS CHNRoute"
+msgstr "ChinaDNS路由表"
 
 msgid "NULL - As Global Proxy"
 msgstr "留空 - 作为全局代理"

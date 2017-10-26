@@ -12,6 +12,10 @@ local gfwmode=0
 
 local pdnsd_flag=0
 
+local function has_bin(name)
+	return luci.sys.call("command -v %s >/dev/null" %{name}) == 0
+end
+
 if nixio.fs.access("/etc/dnsmasq.ssr/gfw_list.conf") then
 gfwmode=1		
 end
@@ -77,6 +81,33 @@ uci:foreach(shadowsocksr, "servers", function(s)
 end)
 
 
+-- [[ Server Subscribe ]]--
+if nixio.fs.access("/usr/share/shadowsocksr/subscribe.sh") and has_bin("base64") and has_bin("curl") and has_bin("bash") then
+	se = m:section(TypedSection, "server_subscribe", translate("Server subscription"))
+	se.anonymous = true
+
+	o = se:option(Flag, "auto_update", translate("Auto Update"))
+	o.rmempty = false
+
+	o = se:option(Flag, "proxy", translate("Through proxy update"))
+	o.rmempty = false
+
+	o = se:option(ListValue, "auto_update_time", translate("Update time (every day)"))
+	for t = 0,23 do
+	o:value(t, t..":00")
+	end
+	o.default=2
+	o.rmempty = false
+
+	o = se:option(DynamicList, "subscribe_url", translate("Subscribe URL"))
+	o.rmempty = true
+
+	o = se:option(Button,"update",translate("Update"))
+	o.write = function()
+	luci.sys.call("/usr/share/shadowsocksr/subscribe.sh >/dev/null 2>&1")
+	luci.http.redirect(luci.dispatcher.build_url("admin", "services", "shadowsocksr", "servers"))
+	end
+end
 
 -- [[ Servers Setting ]]--
 sec = m:section(TypedSection, "servers", translate("Servers Setting"))
