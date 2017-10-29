@@ -103,8 +103,8 @@ msgstr "接口 - WAN"
 msgid "Bypassed IP List"
 msgstr "被忽略IP列表"
 
-msgid "ChinaDNS CHNRoute"
-msgstr "ChinaDNS路由表"
+msgid "China CHNRoute"
+msgstr "China 路由表"
 
 msgid "NULL - As Global Proxy"
 msgstr "留空 - 作为全局代理"
