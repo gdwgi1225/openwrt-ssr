@@ -2,251 +2,251 @@ ShadowsocksR-libev for OpenWrt
 ===
 
 
-ç®€ä»‹
+¼ò½é
 ---
 
- æœ¬é¡¹ç›®æ˜¯ [shadowsocksr-libev][1] åœ¨ OpenWrt ä¸Šçš„ç§»æ¤  
+ ±¾ÏîÄ¿ÊÇ [shadowsocksr-libev][1] ÔÚ OpenWrt ÉÏµÄÒÆÖ²  
  
- å„å¹³å°é¢„ç¼–è¯‘IPKè¯·åœ¨æœ¬é¡¹ç›®releasesé¡µé¢ä¸‹è½½
+ ¸÷Æ½Ì¨Ô¤±àÒëIPKÇëÔÚ±¾ÏîÄ¿releasesÒ³ÃæÏÂÔØ
 
-ç‰¹æ€§
+ÌØÐÔ
 ---
 
-è½¯ä»¶åŒ…åŒ…å« [shadowsocksr-libev][1] çš„å¯æ‰§è¡Œæ–‡ä»¶,ä»¥åŠluciæŽ§åˆ¶ç•Œé¢  
+Èí¼þ°ü°üº¬ [shadowsocksr-libev][1] µÄ¿ÉÖ´ÐÐÎÄ¼þ,ÒÔ¼°luci¿ØÖÆ½çÃæ  
 
-æ”¯æŒSSRå®¢æˆ·ç«¯ã€æœåŠ¡ç«¯æ¨¡å¼ï¼ˆæœåŠ¡ç«¯æ”¯æŒéƒ¨åˆ†æ··æ·†æ¨¡å¼ã€æ”¯æŒå¤šç«¯å£ï¼‰
+Ö§³ÖSSR¿Í»§¶Ë¡¢·þÎñ¶ËÄ£Ê½£¨·þÎñ¶ËÖ§³Ö²¿·Ö»ìÏýÄ£Ê½¡¢Ö§³Ö¶à¶Ë¿Ú£©
 
-æ”¯æŒSOCK5ä»£ç†ï¼›æ”¯æŒUDPä¸­ç»§ï¼›æ”¯æŒå¹¿å‘Šå±è”½
+Ö§³ÖSOCK5´úÀí£»Ö§³ÖUDPÖÐ¼Ì£»Ö§³Ö¹ã¸æÆÁ±Î
 
-æ”¯æŒä¸¤ç§è¿è¡Œæ¨¡å¼ï¼šIPè·¯ç”±æ¨¡å¼å’ŒGFWåˆ—è¡¨æ¨¡å¼ï¼ˆGFWListï¼‰
+Ö§³ÖÁ½ÖÖÔËÐÐÄ£Ê½£ºIPÂ·ÓÉÄ£Ê½ºÍGFWÁÐ±íÄ£Ê½£¨GFWList£©
 
-æ‰€æœ‰è¿›ç¨‹è‡ªåŠ¨å®ˆæŠ¤ï¼Œå´©æºƒåŽè‡ªåŠ¨é‡å¯ï¼›æ”¯æŒæœåŠ¡å™¨è‡ªåŠ¨åˆ‡æ¢ï¼›
+ËùÓÐ½ø³Ì×Ô¶¯ÊØ»¤£¬±ÀÀ£ºó×Ô¶¯ÖØÆô£»Ö§³Ö·þÎñÆ÷×Ô¶¯ÇÐ»»£»
 
-é›†æˆ[KcpTunåŠ é€Ÿ][4]ï¼Œæ­¤åŠŸèƒ½å¯¹è·¯ç”±å™¨æ€§èƒ½è¦æ±‚è¾ƒé«˜ï¼Œéœ€ä¸‹è½½å¯¹åº”çš„äºŒè¿›åˆ¶æ–‡ä»¶åˆ°è·¯ç”±å™¨æŒ‡å®šç›®å½•ï¼Œè¯·é…Œæƒ…ä½¿ç”¨
+¼¯³É[KcpTun¼ÓËÙ][4]£¬´Ë¹¦ÄÜ¶ÔÂ·ÓÉÆ÷ÐÔÄÜÒªÇó½Ï¸ß£¬ÐèÏÂÔØ¶ÔÓ¦µÄ¶þ½øÖÆÎÄ¼þµ½Â·ÓÉÆ÷Ö¸¶¨Ä¿Â¼£¬Çë×ÃÇéÊ¹ÓÃ
 
-å®¢æˆ·ç«¯å…¼å®¹è¿è¡ŒSSæˆ–SSRçš„æœåŠ¡å™¨ï¼Œä½¿ç”¨SSæœåŠ¡å™¨æ—¶ï¼Œä¼ è¾“åè®®éœ€è®¾ç½®ä¸ºoriginï¼Œæ··æ·†æ’ä»¶éœ€è®¾ç½®ä¸ºplain
+¿Í»§¶Ë¼æÈÝÔËÐÐSS»òSSRµÄ·þÎñÆ÷£¬Ê¹ÓÃSS·þÎñÆ÷Ê±£¬´«ÊäÐ­ÒéÐèÉèÖÃÎªorigin£¬»ìÏý²å¼þÐèÉèÖÃÎªplain
 
-è¿è¡Œæ¨¡å¼ä»‹ç»
+ÔËÐÐÄ£Ê½½éÉÜ
 ---
-ã€IPè·¯ç”±æ¨¡å¼ã€‘
- - æ‰€æœ‰å›½å†…IPç½‘æ®µä¸èµ°ä»£ç†ï¼Œå›½å¤–IPç½‘æ®µèµ°ä»£ç†ï¼›
- - ç™½åå•æ¨¡å¼ï¼šç¼ºçœéƒ½èµ°ä»£ç†ï¼Œåˆ—è¡¨ä¸­IPç½‘æ®µä¸èµ°ä»£ç†
+¡¾IPÂ·ÓÉÄ£Ê½¡¿
+ - ËùÓÐ¹úÄÚIPÍø¶Î²»×ß´úÀí£¬¹úÍâIPÍø¶Î×ß´úÀí£»
+ - °×Ãûµ¥Ä£Ê½£ºÈ±Ê¡¶¼×ß´úÀí£¬ÁÐ±íÖÐIPÍø¶Î²»×ß´úÀí
 
-ä¼˜ç‚¹ï¼šå›½å†…å¤–åˆ†æµæ¸…æ™°æ˜Žç¡®ï¼›é€‚åˆçº¿è·¯å¥½SSRæœåŠ¡å™¨ï¼Œé€šè¿‡ä»£ç†å¯æé«˜è®¿é—®å›½å¤–ç½‘ç«™çš„é€Ÿåº¦ï¼›
+ÓÅµã£º¹úÄÚÍâ·ÖÁ÷ÇåÎúÃ÷È·£»ÊÊºÏÏßÂ·ºÃSSR·þÎñÆ÷£¬Í¨¹ý´úÀí¿ÉÌá¸ß·ÃÎÊ¹úÍâÍøÕ¾µÄËÙ¶È£»
 
-ç¼ºç‚¹ï¼šå¼€å¯BTä¸‹è½½æ—¶ï¼Œå¦‚è¿žæŽ¥å›½å¤–çš„IPï¼Œä¼šæŸè€—SSRæœåŠ¡å™¨çš„æµé‡ï¼›å¦‚æžœSSRæœåŠ¡å™¨çº¿è·¯ä¸å¥½ï¼Œé€šè¿‡ä»£ç†è®¿é—®å›½å¤–ç½‘ç«™çš„é€Ÿåº¦ä¸å¦‚ç›´è¿ž
+È±µã£º¿ªÆôBTÏÂÔØÊ±£¬ÈçÁ¬½Ó¹úÍâµÄIP£¬»áËðºÄSSR·þÎñÆ÷µÄÁ÷Á¿£»Èç¹ûSSR·þÎñÆ÷ÏßÂ·²»ºÃ£¬Í¨¹ý´úÀí·ÃÎÊ¹úÍâÍøÕ¾µÄËÙ¶È²»ÈçÖ±Á¬
 
-ã€GFWåˆ—è¡¨æ¨¡å¼ã€‘
- - åªæœ‰åœ¨GFWåˆ—è¡¨ä¸­çš„ç½‘ç«™èµ°ä»£ç†ï¼›å…¶ä»–éƒ½ä¸èµ°ä»£ç†ï¼›
- - é»‘åå•æ¨¡å¼ï¼šç¼ºçœéƒ½ä¸èµ°ä»£ç†ï¼Œåˆ—è¡¨ä¸­ç½‘ç«™èµ°ä»£ç†
+¡¾GFWÁÐ±íÄ£Ê½¡¿
+ - Ö»ÓÐÔÚGFWÁÐ±íÖÐµÄÍøÕ¾×ß´úÀí£»ÆäËû¶¼²»×ß´úÀí£»
+ - ºÚÃûµ¥Ä£Ê½£ºÈ±Ê¡¶¼²»×ß´úÀí£¬ÁÐ±íÖÐÍøÕ¾×ß´úÀí
 
-ä¼˜ç‚¹ï¼šç›®æ ‡æ˜Žç¡®ï¼Œåªæœ‰è®¿é—®åˆ—è¡¨ä¸­ç½‘ç«™æ‰ä¼šæŸè€—SSRæœåŠ¡å™¨æµé‡
+ÓÅµã£ºÄ¿±êÃ÷È·£¬Ö»ÓÐ·ÃÎÊÁÐ±íÖÐÍøÕ¾²Å»áËðºÄSSR·þÎñÆ÷Á÷Á¿
 
-ç¼ºç‚¹ï¼šGFWåˆ—è¡¨å¹¶ä¸èƒ½100%æ¶µç›–è¢«å¢™ç«™ç‚¹ï¼Œè€Œä¸”æœ‰äº›å›½å¤–ç«™ç‚¹ç›´è¿žé€Ÿåº¦è¿œä¸å¦‚èµ°ä»£ç† 
+È±µã£ºGFWÁÐ±í²¢²»ÄÜ100%º­¸Ç±»Ç½Õ¾µã£¬¶øÇÒÓÐÐ©¹úÍâÕ¾µãÖ±Á¬ËÙ¶ÈÔ¶²»Èç×ß´úÀí 
 
-æ³¨æ„ï¼šå¦‚æžœè¦ä½¿ç”¨SSR for OpenWRTçš„æœåŠ¡ç«¯æŽ¥æ”¶æ‰‹æœºçš„æŽ¥å…¥ï¼ˆé€šè¿‡3G/4Gç½‘ç»œï¼‰ï¼Œè¯·ä½¿ç”¨IPè·¯ç”±æ¨¡å¼ï¼ŒåŽŸå› æ˜¯æ‰‹æœºé€šè¿‡æ— çº¿ç½‘ç»œæŽ¥å…¥OpenWRTæœåŠ¡ç«¯ï¼Œæ‰‹æœºä¸Šå¦‚æžœè¦è®¿é—®googleï¼Œå®ƒä½¿ç”¨çš„æ˜¯æ‰‹æœºä¸Šçš„DNSè§£æžï¼ŒåŸŸåè§£æžæ˜¯è¢«æ±¡æŸ“çš„ï¼ŒæŒ‡å‘çš„æ˜¯ä¸€ä¸ªéšæœºIPï¼Œæ­¤IPä¸èƒ½å’ŒGFWåˆ—è¡¨åŒ¹é…ï¼Œå› æ­¤å¦‚æžœä½¿ç”¨GFWæ¨¡å¼ï¼Œå°†ä¸èƒ½ç§‘å­¦ä¸Šç½‘
+×¢Òâ£ºÈç¹ûÒªÊ¹ÓÃSSR for OpenWRTµÄ·þÎñ¶Ë½ÓÊÕÊÖ»úµÄ½ÓÈë£¨Í¨¹ý3G/4GÍøÂç£©£¬ÇëÊ¹ÓÃIPÂ·ÓÉÄ£Ê½£¬Ô­ÒòÊÇÊÖ»úÍ¨¹ýÎÞÏßÍøÂç½ÓÈëOpenWRT·þÎñ¶Ë£¬ÊÖ»úÉÏÈç¹ûÒª·ÃÎÊgoogle£¬ËüÊ¹ÓÃµÄÊÇÊÖ»úÉÏµÄDNS½âÎö£¬ÓòÃû½âÎöÊÇ±»ÎÛÈ¾µÄ£¬Ö¸ÏòµÄÊÇÒ»¸öËæ»úIP£¬´ËIP²»ÄÜºÍGFWÁÐ±íÆ¥Åä£¬Òò´ËÈç¹ûÊ¹ÓÃGFWÄ£Ê½£¬½«²»ÄÜ¿ÆÑ§ÉÏÍø
 
 
-å¦‚æžœåœ¨IPè·¯ç”±æ¨¡å¼ä¸‹ä»£ç†æ­£å¸¸ï¼Œåœ¨GFWåˆ—è¡¨æ¨¡å¼ä¸‹æ— æ³•æ­£å¸¸è®¿é—®ï¼Œè¯·æ£€æŸ¥DNSè§£æžæ˜¯å¦æ­£ç¡®ï¼ˆæœåŠ¡å™¨æ˜¯å¦å¼€å¯UDPè½¬å‘ã€æ˜¯å¦æœ‰å…¶ä»–dnsè½¯ä»¶å†²çªç­‰ï¼‰
+Èç¹ûÔÚIPÂ·ÓÉÄ£Ê½ÏÂ´úÀíÕý³££¬ÔÚGFWÁÐ±íÄ£Ê½ÏÂÎÞ·¨Õý³£·ÃÎÊ£¬Çë¼ì²éDNS½âÎöÊÇ·ñÕýÈ·£¨·þÎñÆ÷ÊÇ·ñ¿ªÆôUDP×ª·¢¡¢ÊÇ·ñÓÐÆäËûdnsÈí¼þ³åÍ»µÈ£©
 
-å¯é€‰ä¾èµ–               | ä½œç”¨
+¿ÉÑ¡ÒÀÀµ               | ×÷ÓÃ
 -------------------|--------------------
-`dnsmasq-full`     | DNS åŸŸåæ±¡æŸ“åˆ—è¡¨è§£æž
-`curl`             | èŽ·å– DNS åŸŸåæ±¡æŸ“åˆ—è¡¨å’ŒæœåŠ¡å™¨è®¢é˜…æ•°æ®
-`coreutils-base64` | base64 è§£ç  DNS åŸŸåæ±¡æŸ“åˆ—è¡¨å’ŒæœåŠ¡å™¨è®¢é˜…æ•°æ®
-`bash`             | æœåŠ¡å™¨è®¢é˜…è„šæœ¬ä½¿ç”¨ bash è§£é‡Šå™¨è¿è¡Œ
+`dnsmasq-full`     | DNS ÓòÃûÎÛÈ¾ÁÐ±í½âÎö
+`curl`             | »ñÈ¡ DNS ÓòÃûÎÛÈ¾ÁÐ±íºÍ·þÎñÆ÷¶©ÔÄÊý¾Ý
+`coreutils-base64` | base64 ½âÂë DNS ÓòÃûÎÛÈ¾ÁÐ±íºÍ·þÎñÆ÷¶©ÔÄÊý¾Ý
+`bash`             | ·þÎñÆ÷¶©ÔÄ½Å±¾Ê¹ÓÃ bash ½âÊÍÆ÷ÔËÐÐ
 
-ç¼–è¯‘
+±àÒë
 ---
 
- - ä»Ž OpenWrt çš„ [SDK][S] ç¼–è¯‘ï¼ˆç¼–è¯‘çŽ¯å¢ƒï¼šUbuntu 64ä½ç³»ç»Ÿï¼‰ï¼Œå¦‚æžœæ˜¯ç¬¬ä¸€æ¬¡ç¼–è¯‘ï¼Œè¿˜éœ€ä¸‹è½½OpenWrtæ‰€éœ€ä¾èµ–è½¯ä»¶
+ - ´Ó OpenWrt µÄ [SDK][S] ±àÒë£¨±àÒë»·¾³£ºUbuntu 64Î»ÏµÍ³£©£¬Èç¹ûÊÇµÚÒ»´Î±àÒë£¬»¹ÐèÏÂÔØOpenWrtËùÐèÒÀÀµÈí¼þ
    ```bash
    sudo apt-get install gawk libncurses5-dev libz-dev zlib1g-dev  git ccache
    ```
  
- - ä¸‹è½½è·¯ç”±å™¨å¯¹åº”å¹³å°çš„SDK
+ - ÏÂÔØÂ·ÓÉÆ÷¶ÔÓ¦Æ½Ì¨µÄSDK
 
    ```bash
-   # ä»¥ ar71xx å¹³å°ä¸ºä¾‹
+   # ÒÔ ar71xx Æ½Ì¨ÎªÀý
    tar xjf OpenWrt-SDK-15.05-ar71xx-generic_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64.tar.bz2
    cd OpenWrt-SDK-*
-   # å®‰è£… feeds
+   # °²×° feeds
    ./scripts/feeds update packages
    ./scripts/feeds install libpcre
-   # èŽ·å– Makefile
+   # »ñÈ¡ Makefile
    git clone https://github.com/gdwgi1225/openwrt-ssr.git package/openwrt-ssr
-   # é€‰æ‹©è¦ç¼–è¯‘çš„åŒ… 
-   #luci ->3. Applications-> luci-app-shadowsocksR         åŽŸå§‹ç‰ˆæœ¬
-   #luci ->3. Applications-> luci-app-shadowsocksR-GFW     GFWListç‰ˆæœ¬
-   #V1.1.6ä»¥åŽç‰ˆæœ¬å–æ¶ˆå‘å¸ƒå•ç‹¬çš„å®¢æˆ·ç«¯å’ŒæœåŠ¡ç«¯ï¼Œå¦‚æœ‰éœ€è¦ï¼Œè¯·ä¿®æ”¹makefileæˆ–é‡‡ç”¨V1.1.5ç‰ˆæœ¬
+   # Ñ¡ÔñÒª±àÒëµÄ°ü 
+   #luci ->3. Applications-> luci-app-shadowsocksR         Ô­Ê¼°æ±¾
+   #luci ->3. Applications-> luci-app-shadowsocksR-GFW     GFWList°æ±¾
+   #V1.1.6ÒÔºó°æ±¾È¡Ïû·¢²¼µ¥¶ÀµÄ¿Í»§¶ËºÍ·þÎñ¶Ë£¬ÈçÓÐÐèÒª£¬ÇëÐÞ¸Ämakefile»ò²ÉÓÃV1.1.5°æ±¾
    make menuconfig
    
-   #å¦‚æžœæ²¡æœ‰å®‰è£…po2lmoï¼Œåˆ™å®‰è£…ï¼ˆå¯é€‰ï¼‰
+   #Èç¹ûÃ»ÓÐ°²×°po2lmo£¬Ôò°²×°£¨¿ÉÑ¡£©
    pushd package/openwrt-ssr/tools/po2lmo
    make && sudo make install
    popd
-   #ç¼–è¯‘è¯­è¨€æ–‡ä»¶ï¼ˆå¯é€‰ï¼‰
+   #±àÒëÓïÑÔÎÄ¼þ£¨¿ÉÑ¡£©
    po2lmo ./package/openwrt-ssr/files/luci/i18n/shadowsocksr.zh-cn.po ./package/openwrt-ssr/files/luci/i18n/shadowsocksr.zh-cn.lmo
    
-   # å¼€å§‹ç¼–è¯‘
+   # ¿ªÊ¼±àÒë
     make package/openwrt-ssr/compile V=99
    ```
- - LEDEç¼–è¯‘è¡¥å……
+ - LEDE±àÒë²¹³ä
  
-   LEDEæ˜¯OpenWRTçš„å¦ä¸€ä¸ªç‰ˆæœ¬ï¼ŒLEDEçš„SDKé‡‡ç”¨xzåŽ‹ç¼©ï¼Œéœ€å…ˆç”¨xz -dè§£åŽ‹ä¸‹è½½çš„SDKåŒ…ï¼Œå†æŒ‰ä¸Šè¿°å‘½ä»¤æ“ä½œ
+   LEDEÊÇOpenWRTµÄÁíÒ»¸ö°æ±¾£¬LEDEµÄSDK²ÉÓÃxzÑ¹Ëõ£¬ÐèÏÈÓÃxz -d½âÑ¹ÏÂÔØµÄSDK°ü£¬ÔÙ°´ÉÏÊöÃüÁî²Ù×÷
    
-   ä½¿ç”¨LEDEçš„SDKç¼–è¯‘ï¼Œå¯èƒ½ä¼šæç¤ºæ‰¾ä¸åˆ°zlibå’Œopensslæ–‡ä»¶ï¼Œè¯·è¿è¡Œå¦‚ä¸‹å‘½ä»¤
+   Ê¹ÓÃLEDEµÄSDK±àÒë£¬¿ÉÄÜ»áÌáÊ¾ÕÒ²»µ½zlibºÍopensslÎÄ¼þ£¬ÇëÔËÐÐÈçÏÂÃüÁî
  
    ```bash
    ./scripts/feeds update
-   #å¦‚æžœæ›´æ–°baseå‡ºçŽ°é”™è¯¯ï¼Œä¿®æ”¹SDKç›®å½•ä¸‹çš„feeds.conf.defaultæ–‡ä»¶ï¼Œå°†â€œsource.git;HEADâ€æ”¹ä¸ºâ€œsource.gitâ€
+   #Èç¹û¸üÐÂbase³öÏÖ´íÎó£¬ÐÞ¸ÄSDKÄ¿Â¼ÏÂµÄfeeds.conf.defaultÎÄ¼þ£¬½«¡°source.git;HEAD¡±¸ÄÎª¡°source.git¡±
    
    ./scripts/feeds install zlib
    ./scripts/feeds install libopenssl
    ```
- - Pandorabox(æ½˜å¤šæ‹‰)ç¼–è¯‘è¡¥å……
+ - Pandorabox(ÅË¶àÀ­)±àÒë²¹³ä
  
-  æ½˜å¤šæ‹‰ä¹Ÿæ˜¯Openwrtçš„å¦ä¸€ä¸ªå®šåˆ¶ç‰ˆæœ¬ï¼Œç”¨16.10ç‰ˆæœ¬çš„SDKç¼–è¯‘æ—¶æ— æ³•ä½¿ç”¨feedèŽ·å–å®‰è£…åŒ…ï¼Œéœ€è¦å…ˆå°†libpcreã€zlibã€libopensslç­‰makefileæ”¾å…¥SDKçš„packageç›®å½•ï¼Œå†make menuconfig
+  ÅË¶àÀ­Ò²ÊÇOpenwrtµÄÁíÒ»¸ö¶¨ÖÆ°æ±¾£¬ÓÃ16.10°æ±¾µÄSDK±àÒëÊ±ÎÞ·¨Ê¹ÓÃfeed»ñÈ¡°²×°°ü£¬ÐèÒªÏÈ½«libpcre¡¢zlib¡¢libopensslµÈmakefile·ÅÈëSDKµÄpackageÄ¿Â¼£¬ÔÙmake menuconfig
   
-  è¿™ä¸‰ä¸ªåŒ…çš„makefileå¯ä»¥ä»Ž[è¿™é‡Œä¸‹è½½][8]
+  ÕâÈý¸ö°üµÄmakefile¿ÉÒÔ´Ó[ÕâÀïÏÂÔØ][8]
    
-å®‰è£…
+°²×°
 --- 
-æœ¬è½¯ä»¶åŒ…ä¾èµ–åº“ï¼šlibopensslã€libpthreadã€ipsetã€ipã€iptables-mod-tproxyã€libpcreï¼ŒGFWç‰ˆæœ¬è¿˜éœ€ä¾èµ–dnsmasq-fullã€coreutils-base64ï¼Œopkgä¼šè‡ªåŠ¨å®‰è£…ä¸Šè¿°åº“æ–‡ä»¶
+±¾Èí¼þ°üÒÀÀµ¿â£ºlibopenssl¡¢libpthread¡¢ipset¡¢ip¡¢iptables-mod-tproxy¡¢libpcre£¬GFW°æ±¾»¹ÐèÒÀÀµdnsmasq-full¡¢coreutils-base64£¬opkg»á×Ô¶¯°²×°ÉÏÊö¿âÎÄ¼þ
 
-è½¯ä»¶ç¼–è¯‘åŽå¯ç”Ÿæˆä¸¤ä¸ªè½¯ä»¶åŒ…ï¼Œåˆ†åˆ«æ˜¯luci-app-shadowsocksRï¼ˆåŽŸå§‹ç‰ˆæœ¬ï¼‰ã€luci-app-shadowsocksR-GFWï¼ˆGFWç‰ˆæœ¬ï¼‰ï¼Œç”¨æˆ·æ ¹æ®éœ€è¦é€‰æ‹©å…¶ä¸­ä¸€ä¸ªå®‰è£…å³å¯
+Èí¼þ±àÒëºó¿ÉÉú³ÉÁ½¸öÈí¼þ°ü£¬·Ö±ðÊÇluci-app-shadowsocksR£¨Ô­Ê¼°æ±¾£©¡¢luci-app-shadowsocksR-GFW£¨GFW°æ±¾£©£¬ÓÃ»§¸ù¾ÝÐèÒªÑ¡ÔñÆäÖÐÒ»¸ö°²×°¼´¿É
 
-åŽŸå§‹ç‰ˆæœ¬åªæ”¯æŒIPè·¯ç”±æ¨¡å¼ï¼Œå¯¹çŽ°æœ‰OpenWRTç³»ç»Ÿæ”¹åŠ¨è¾ƒå°‘ï¼›æœ¬åœ°dnsåŸŸåè§£æžå­˜åœ¨æ±¡æŸ“ï¼Œç”±è¿œç«¯SSRæœåŠ¡å™¨é‡æ–°è¿›è¡ŒäºŒæ¬¡DNSè§£æžï¼›å¯å’Œå…¶ä»–DNSå¤„ç†è½¯ä»¶ä¸€èµ·ä½¿ç”¨ï¼›
+Ô­Ê¼°æ±¾Ö»Ö§³ÖIPÂ·ÓÉÄ£Ê½£¬¶ÔÏÖÓÐOpenWRTÏµÍ³¸Ä¶¯½ÏÉÙ£»±¾µØdnsÓòÃû½âÎö´æÔÚÎÛÈ¾£¬ÓÉÔ¶¶ËSSR·þÎñÆ÷ÖØÐÂ½øÐÐ¶þ´ÎDNS½âÎö£»¿ÉºÍÆäËûDNS´¦ÀíÈí¼þÒ»ÆðÊ¹ÓÃ£»
 
-GFWç‰ˆæœ¬æ”¯æŒIPè·¯ç”±æ¨¡å¼å’ŒGFWåˆ—è¡¨æ¨¡å¼ï¼Œéœ€å¸è½½åŽŸæœ‰çš„dnsmasqï¼Œä¼šæŽ¥ç®¡OpenWRTçš„åŸŸåå¤„ç†ï¼Œé¿å…åŸŸåæ±¡æŸ“å¹¶å®žçŽ°å‡†ç¡®åˆ†æµï¼›SSRæœåŠ¡å™¨ä¾§éœ€å¼€å¯UDPè½¬å‘ï¼›
+GFW°æ±¾Ö§³ÖIPÂ·ÓÉÄ£Ê½ºÍGFWÁÐ±íÄ£Ê½£¬ÐèÐ¶ÔØÔ­ÓÐµÄdnsmasq£¬»á½Ó¹ÜOpenWRTµÄÓòÃû´¦Àí£¬±ÜÃâÓòÃûÎÛÈ¾²¢ÊµÏÖ×¼È··ÖÁ÷£»SSR·þÎñÆ÷²àÐè¿ªÆôUDP×ª·¢£»
 
-æé†’ï¼šå¦‚æžœå®‰è£…GFWç‰ˆæœ¬ï¼Œè¯·åœç”¨å½“å‰é’ˆå¯¹åŸŸåæ±¡æŸ“çš„å…¶ä»–å¤„ç†è½¯ä»¶ï¼Œä¸è¦å ç”¨UDP 5353ç«¯å£
+ÌáÐÑ£ºÈç¹û°²×°GFW°æ±¾£¬ÇëÍ£ÓÃµ±Ç°Õë¶ÔÓòÃûÎÛÈ¾µÄÆäËû´¦ÀíÈí¼þ£¬²»ÒªÕ¼ÓÃUDP 5353¶Ë¿Ú
 
-å°†ç¼–è¯‘æˆåŠŸçš„luci-app-shadowsocksR*_all.ipké€šè¿‡winscpä¸Šä¼ åˆ°è·¯ç”±å™¨çš„/tmpç›®å½•ï¼Œæ‰§è¡Œå‘½ä»¤ï¼š
+½«±àÒë³É¹¦µÄluci-app-shadowsocksR*_all.ipkÍ¨¹ýwinscpÉÏ´«µ½Â·ÓÉÆ÷µÄ/tmpÄ¿Â¼£¬Ö´ÐÐÃüÁî£º
 
    ```bash
-   #åˆ·æ–°opkgåˆ—è¡¨
+   #Ë¢ÐÂopkgÁÐ±í
    opkg update
    
-   #åˆ é™¤dnsmasqï¼ˆGFWç‰ˆæœ¬ç¬¬ä¸€æ¬¡å®‰è£…éœ€æ‰‹åŠ¨å¸è½½dnsmasqï¼Œå…¶ä»–æƒ…å†µä¸‹ä¸éœ€è¦ï¼‰
+   #É¾³ýdnsmasq£¨GFW°æ±¾µÚÒ»´Î°²×°ÐèÊÖ¶¯Ð¶ÔØdnsmasq£¬ÆäËûÇé¿öÏÂ²»ÐèÒª£©
    opkg remove dnsmasq 
    
-   #å®‰è£…è½¯ä»¶åŒ…
+   #°²×°Èí¼þ°ü
    opkg install /tmp/luci-app-shadowsocksR*_all.ipk 
    ```
-å¦‚è¦å¯ç”¨KcpTunï¼Œéœ€ä»Žæœ¬é¡¹ç›®releasesé¡µé¢æˆ–ç›¸å…³ç½‘ç«™ï¼ˆ[ç½‘ç«™1][4]ã€[ç½‘ç«™2][7]ï¼‰ä¸‹è½½è·¯ç”±å™¨å¹³å°å¯¹åº”çš„äºŒè¿›åˆ¶æ–‡ä»¶ï¼Œå¹¶å°†æ–‡ä»¶åæ”¹ä¸ºssr-kcptunï¼Œæ”¾å…¥/usr/binç›®å½•
+ÈçÒªÆôÓÃKcpTun£¬Ðè´Ó±¾ÏîÄ¿releasesÒ³Ãæ»òÏà¹ØÍøÕ¾£¨[ÍøÕ¾1][4]¡¢[ÍøÕ¾2][7]£©ÏÂÔØÂ·ÓÉÆ÷Æ½Ì¨¶ÔÓ¦µÄ¶þ½øÖÆÎÄ¼þ£¬²¢½«ÎÄ¼þÃû¸ÄÎªssr-kcptun£¬·ÅÈë/usr/binÄ¿Â¼
 
-å®‰è£…åŽå¼ºçƒˆå»ºè®®é‡å¯è·¯ç”±å™¨ï¼Œå› ä¸ºluciæœ‰ç¼“å­˜æœºåˆ¶ï¼Œåœ¨å‡çº§æˆ–æ–°è£…IPKåŽï¼Œå¦‚ä¸é‡å¯æœ‰æ—¶ä¼šå‡ºçŽ°ä¸€äº›èŽ«åå…¶å¦™çš„é—®é¢˜ï¼›å¦GFWç‰ˆæœ¬ä¼šå®‰è£…ã€ä¿®æ”¹ã€è°ƒç”¨dnsmasq-fullï¼Œå®‰è£…åŽæœ€å¥½èƒ½é‡å¯è·¯ç”±å™¨
+°²×°ºóÇ¿ÁÒ½¨ÒéÖØÆôÂ·ÓÉÆ÷£¬ÒòÎªluciÓÐ»º´æ»úÖÆ£¬ÔÚÉý¼¶»òÐÂ×°IPKºó£¬Èç²»ÖØÆôÓÐÊ±»á³öÏÖÒ»Ð©ÄªÃûÆäÃîµÄÎÊÌâ£»ÁíGFW°æ±¾»á°²×°¡¢ÐÞ¸Ä¡¢µ÷ÓÃdnsmasq-full£¬°²×°ºó×îºÃÄÜÖØÆôÂ·ÓÉÆ÷
 
-é…ç½®
+ÅäÖÃ
 ---
 
-   è½¯ä»¶åŒ…é€šè¿‡lucié…ç½®ï¼Œ æ”¯æŒçš„é…ç½®é¡¹å¦‚ä¸‹:  
+   Èí¼þ°üÍ¨¹ýluciÅäÖÃ£¬ Ö§³ÖµÄÅäÖÃÏîÈçÏÂ:  
    
-   å®¢æˆ·ç«¯æœåŠ¡å™¨é…ç½®ï¼š
+   ¿Í»§¶Ë·þÎñÆ÷ÅäÖÃ£º
 
-   é”®å           | æ•°æ®ç±»åž‹   | è¯´æ˜Ž
+   ¼üÃû           | Êý¾ÝÀàÐÍ   | ËµÃ÷
    ---------------|------------|-----------------------------------------------
-   auth_enable    | å¸ƒå°”åž‹     | ä¸€æ¬¡éªŒè¯å¼€å…³[0.å…³é—­ 1.å¼€å¯],éœ€è¦æœåŠ¡ç«¯åŒæ—¶æ”¯æŒ
-   switch_enable  | å¸ƒå°”åž‹     | æ­¤æœåŠ¡å™¨æ˜¯å¦å¯ä»¥è‡ªåŠ¨åˆ‡æ¢
-   server         | ä¸»æœºç±»åž‹   | æœåŠ¡å™¨åœ°å€, å¯ä»¥æ˜¯ IP æˆ–è€…åŸŸåï¼ŒæŽ¨èä½¿ç”¨IPåœ°å€
-   server_port    | æ•°å€¼       | æœåŠ¡å™¨ç«¯å£å·, å°äºŽ 65535   
-   local_port     | æ•°å€¼       | æœ¬åœ°ç»‘å®šçš„ç«¯å£å·, å°äºŽ 65535
-   timeout        | æ•°å€¼       | è¶…æ—¶æ—¶é—´ï¼ˆç§’ï¼‰, é»˜è®¤ 60   
-   password       | å­—ç¬¦ä¸²     | æœåŠ¡ç«¯è®¾ç½®çš„å¯†ç 
-   encrypt_method | å­—ç¬¦ä¸²     | åŠ å¯†æ–¹å¼, [è¯¦æƒ…å‚è€ƒ][2]
-   protocol       | å­—ç¬¦ä¸²     | ä¼ è¾“åè®®ï¼Œé»˜è®¤"origin"[è¯¦æƒ…å‚è€ƒ][3]
-   obfs           | å­—ç¬¦ä¸²     | æ··æ·†æ’ä»¶ï¼Œé»˜è®¤"plain" [è¯¦æƒ…å‚è€ƒ][3]
-   obfs_param     | å­—ç¬¦ä¸²     | æ··æ·†æ’ä»¶å‚æ•° [è¯¦æƒ…å‚è€ƒ][3]
-   fast_open      | å¸ƒå°”åž‹     | TCPå¿«é€Ÿæ‰“å¼€ [è¯¦æƒ…å‚è€ƒ][3]
-   kcp_enable     | å¸ƒå°”åž‹     | KcpTunå¼€å¯å¼€å…³
-   kcp_port       | æ•°å€¼       | KcpTunæœåŠ¡å™¨ç«¯å£å·, å°äºŽ 65535
-   kcp_password   | å­—ç¬¦ä¸²     | KcpTunå¯†ç ï¼Œç•™ç©ºè¡¨ç¤º"it's a secrect"
-   kcp_param      | å­—ç¬¦ä¸²     | KcpTunå‚æ•°[è¯¦æƒ…å‚è€ƒ][4]
+   auth_enable    | ²¼¶ûÐÍ     | Ò»´ÎÑéÖ¤¿ª¹Ø[0.¹Ø±Õ 1.¿ªÆô],ÐèÒª·þÎñ¶ËÍ¬Ê±Ö§³Ö
+   switch_enable  | ²¼¶ûÐÍ     | ´Ë·þÎñÆ÷ÊÇ·ñ¿ÉÒÔ×Ô¶¯ÇÐ»»
+   server         | Ö÷»úÀàÐÍ   | ·þÎñÆ÷µØÖ·, ¿ÉÒÔÊÇ IP »òÕßÓòÃû£¬ÍÆ¼öÊ¹ÓÃIPµØÖ·
+   server_port    | ÊýÖµ       | ·þÎñÆ÷¶Ë¿ÚºÅ, Ð¡ÓÚ 65535   
+   local_port     | ÊýÖµ       | ±¾µØ°ó¶¨µÄ¶Ë¿ÚºÅ, Ð¡ÓÚ 65535
+   timeout        | ÊýÖµ       | ³¬Ê±Ê±¼ä£¨Ãë£©, Ä¬ÈÏ 60   
+   password       | ×Ö·û´®     | ·þÎñ¶ËÉèÖÃµÄÃÜÂë
+   encrypt_method | ×Ö·û´®     | ¼ÓÃÜ·½Ê½, [ÏêÇé²Î¿¼][2]
+   protocol       | ×Ö·û´®     | ´«ÊäÐ­Òé£¬Ä¬ÈÏ"origin"[ÏêÇé²Î¿¼][3]
+   obfs           | ×Ö·û´®     | »ìÏý²å¼þ£¬Ä¬ÈÏ"plain" [ÏêÇé²Î¿¼][3]
+   obfs_param     | ×Ö·û´®     | »ìÏý²å¼þ²ÎÊý [ÏêÇé²Î¿¼][3]
+   fast_open      | ²¼¶ûÐÍ     | TCP¿ìËÙ´ò¿ª [ÏêÇé²Î¿¼][3]
+   kcp_enable     | ²¼¶ûÐÍ     | KcpTun¿ªÆô¿ª¹Ø
+   kcp_port       | ÊýÖµ       | KcpTun·þÎñÆ÷¶Ë¿ÚºÅ, Ð¡ÓÚ 65535
+   kcp_password   | ×Ö·û´®     | KcpTunÃÜÂë£¬Áô¿Õ±íÊ¾"it's a secrect"
+   kcp_param      | ×Ö·û´®     | KcpTun²ÎÊý[ÏêÇé²Î¿¼][4]
    
-   å®¢æˆ·ç«¯å…¶ä»–é…ç½®ï¼š
+   ¿Í»§¶ËÆäËûÅäÖÃ£º
    
-   åç§°                        | å«ä¹‰
+   Ãû³Æ                        | º¬Òå
    ----------------------------|-----------------------------------------------------------
-   å…¨å±€æœåŠ¡å™¨                  | é€‰æ‹©è¦è¿žæŽ¥çš„SSR TCPä»£ç†æœåŠ¡å™¨
-   UDPä¸­ç»§æœåŠ¡å™¨               | é€‰æ‹©è¦è¿žæŽ¥çš„SSR UDPä»£ç†æœåŠ¡å™¨
-   å¯ç”¨è¿›ç¨‹ç›‘æŽ§                | å¯ç”¨åŽå¯å¯¹æ‰€æœ‰è¿›ç¨‹è¿›è¡Œç›‘æŽ§ï¼Œå‘çŽ°å´©æºƒè‡ªåŠ¨é‡å¯
-   å¯ç”¨è‡ªåŠ¨åˆ‡æ¢                | å¯ç”¨åŽå¦‚æžœç¼ºçœä»£ç†æœåŠ¡å™¨å¤±æ•ˆï¼Œå¯ä»¥è‡ªåŠ¨åˆ‡æ¢åˆ°å…¶ä»–å¯ç”¨çš„ä»£ç†æœåŠ¡å™¨
-   è‡ªåŠ¨åˆ‡æ¢æ£€æŸ¥å‘¨æœŸ            | æ£€æŸ¥å½“å‰ä»£ç†æœåŠ¡å™¨æ˜¯å¦æœ‰æ•ˆçš„æ—¶é—´å‘¨æœŸï¼Œé»˜è®¤10åˆ†é’Ÿï¼ˆ600ç§’ï¼‰
-   åˆ‡æ¢æ£€æŸ¥è¶…æ—¶æ—¶é—´            | æ£€æŸ¥æœåŠ¡å™¨ç«¯å£æˆ–ç½‘ç»œè¿žé€šæ€§çš„è¶…æ—¶æ—¶é—´ï¼Œé»˜è®¤3ç§’é’Ÿ
-   DNSè§£æžæ–¹å¼                 | ç”¨UDPéš§é“æ–¹å¼è¿˜æ˜¯Pdnsdæ–¹å¼ï¼ˆTCPï¼‰æ¥è§£æžåŸŸåï¼ˆGFWç‰ˆæœ¬ç‰¹æœ‰ï¼Œå®‰è£…pdnsdåŽæ˜¾ç¤ºï¼‰
-   å¯ç”¨éš§é“ï¼ˆDNSï¼‰è½¬å‘         | å¼€å¯DNSéš§é“ï¼ˆåŽŸå§‹ç‰ˆæœ¬ç‰¹æœ‰ï¼‰
-   éš§é“ï¼ˆDNSï¼‰æœ¬åœ°ç«¯å£         | DNSéš§é“æœ¬åœ°ç«¯å£ï¼ˆåŽŸå§‹ç‰ˆæœ¬ç‰¹æœ‰ï¼ŒGFWå›ºå®šä¸º5353ï¼‰
-   DNSæœåŠ¡å™¨åœ°å€å’Œç«¯å£         | DNSè¯·æ±‚è½¬å‘çš„æœåŠ¡å™¨ï¼Œä¸€èˆ¬è®¾ç½®ä¸ºgoogleçš„dnsåœ°å€
-   SOCKS5ä»£ç†-æœåŠ¡å™¨           | ç”¨äºŽSOCKSä»£ç†çš„SSRæœåŠ¡å™¨
-   SOCKS5ä»£ç†-æœ¬åœ°ç«¯å£         | ç”¨äºŽSOCKSä»£ç†çš„æœ¬åœ°ç«¯å£ï¼ˆæ³¨æ„æ­¤ç«¯å£ä¸èƒ½å’ŒSSRæœåŠ¡å™¨é…ç½®ä¸­çš„æœ¬åœ°ç«¯å£ç›¸åŒï¼‰
-   è®¿é—®æŽ§åˆ¶-è¢«å¿½ç•¥IPåˆ—è¡¨       | IPè·¯ç”±æ¨¡å¼æ—¶æœ‰æ•ˆï¼Œç”¨äºŽæŒ‡å®šå­˜æ”¾å›½å†…IPç½‘æ®µçš„æ–‡ä»¶ï¼Œè¿™äº›ç½‘æ®µä¸ç»è¿‡ä»£ç†
-   è®¿é—®æŽ§åˆ¶-é¢å¤–è¢«å¿½ç•¥IP       | IPè·¯ç”±æ¨¡å¼æ—¶æœ‰æ•ˆï¼Œç”¨äºŽæ·»åŠ é¢å¤–çš„ä¸ç»è¿‡ä»£ç†çš„ç›®çš„IPåœ°å€
-   è®¿é—®æŽ§åˆ¶-å¼ºåˆ¶èµ°ä»£ç†IP       | ç”¨äºŽæ·»åŠ éœ€è¦ç»è¿‡ä»£ç†çš„ç›®çš„IPåœ°å€
-   è·¯ç”±å™¨è®¿é—®æŽ§åˆ¶              | ç”¨äºŽæŽ§åˆ¶è·¯ç”±å™¨æœ¬èº«æ˜¯å¦èµ°ä»£ç†ï¼Œé€‚ç”¨äºŽè·¯ç”±å™¨æŒ‚è½½BTä¸‹è½½çš„æƒ…å†µ
-   å†…ç½‘è®¿é—®æŽ§åˆ¶                | å¯ä»¥æŽ§åˆ¶å†…ç½‘ä¸­å“ªäº›IPèƒ½èµ°ä»£ç†ï¼Œå“ªäº›ä¸èƒ½èµ°ä»£ç†ï¼Œå¯ä»¥æŒ‡å®šä¸‹é¢åˆ—è¡¨å†…æˆ–åˆ—è¡¨å¤–IP
-   å†…ç½‘ä¸»æœºåˆ—è¡¨                | å†…ç½‘IPåˆ—è¡¨ï¼Œå¯ä»¥æŒ‡å®šå¤šä¸ª
+   È«¾Ö·þÎñÆ÷                  | Ñ¡ÔñÒªÁ¬½ÓµÄSSR TCP´úÀí·þÎñÆ÷
+   UDPÖÐ¼Ì·þÎñÆ÷               | Ñ¡ÔñÒªÁ¬½ÓµÄSSR UDP´úÀí·þÎñÆ÷
+   ÆôÓÃ½ø³Ì¼à¿Ø                | ÆôÓÃºó¿É¶ÔËùÓÐ½ø³Ì½øÐÐ¼à¿Ø£¬·¢ÏÖ±ÀÀ£×Ô¶¯ÖØÆô
+   ÆôÓÃ×Ô¶¯ÇÐ»»                | ÆôÓÃºóÈç¹ûÈ±Ê¡´úÀí·þÎñÆ÷Ê§Ð§£¬¿ÉÒÔ×Ô¶¯ÇÐ»»µ½ÆäËû¿ÉÓÃµÄ´úÀí·þÎñÆ÷
+   ×Ô¶¯ÇÐ»»¼ì²éÖÜÆÚ            | ¼ì²éµ±Ç°´úÀí·þÎñÆ÷ÊÇ·ñÓÐÐ§µÄÊ±¼äÖÜÆÚ£¬Ä¬ÈÏ10·ÖÖÓ£¨600Ãë£©
+   ÇÐ»»¼ì²é³¬Ê±Ê±¼ä            | ¼ì²é·þÎñÆ÷¶Ë¿Ú»òÍøÂçÁ¬Í¨ÐÔµÄ³¬Ê±Ê±¼ä£¬Ä¬ÈÏ3ÃëÖÓ
+   DNS½âÎö·½Ê½                 | ÓÃUDPËíµÀ·½Ê½»¹ÊÇPdnsd·½Ê½£¨TCP£©À´½âÎöÓòÃû£¨GFW°æ±¾ÌØÓÐ£¬°²×°pdnsdºóÏÔÊ¾£©
+   ÆôÓÃËíµÀ£¨DNS£©×ª·¢         | ¿ªÆôDNSËíµÀ£¨Ô­Ê¼°æ±¾ÌØÓÐ£©
+   ËíµÀ£¨DNS£©±¾µØ¶Ë¿Ú         | DNSËíµÀ±¾µØ¶Ë¿Ú£¨Ô­Ê¼°æ±¾ÌØÓÐ£¬GFW¹Ì¶¨Îª5353£©
+   DNS·þÎñÆ÷µØÖ·ºÍ¶Ë¿Ú         | DNSÇëÇó×ª·¢µÄ·þÎñÆ÷£¬Ò»°ãÉèÖÃÎªgoogleµÄdnsµØÖ·
+   SOCKS5´úÀí-·þÎñÆ÷           | ÓÃÓÚSOCKS´úÀíµÄSSR·þÎñÆ÷
+   SOCKS5´úÀí-±¾µØ¶Ë¿Ú         | ÓÃÓÚSOCKS´úÀíµÄ±¾µØ¶Ë¿Ú£¨×¢Òâ´Ë¶Ë¿Ú²»ÄÜºÍSSR·þÎñÆ÷ÅäÖÃÖÐµÄ±¾µØ¶Ë¿ÚÏàÍ¬£©
+   ·ÃÎÊ¿ØÖÆ-±»ºöÂÔIPÁÐ±í       | IPÂ·ÓÉÄ£Ê½Ê±ÓÐÐ§£¬ÓÃÓÚÖ¸¶¨´æ·Å¹úÄÚIPÍø¶ÎµÄÎÄ¼þ£¬ÕâÐ©Íø¶Î²»¾­¹ý´úÀí
+   ·ÃÎÊ¿ØÖÆ-¶îÍâ±»ºöÂÔIP       | IPÂ·ÓÉÄ£Ê½Ê±ÓÐÐ§£¬ÓÃÓÚÌí¼Ó¶îÍâµÄ²»¾­¹ý´úÀíµÄÄ¿µÄIPµØÖ·
+   ·ÃÎÊ¿ØÖÆ-Ç¿ÖÆ×ß´úÀíIP       | ÓÃÓÚÌí¼ÓÐèÒª¾­¹ý´úÀíµÄÄ¿µÄIPµØÖ·
+   Â·ÓÉÆ÷·ÃÎÊ¿ØÖÆ              | ÓÃÓÚ¿ØÖÆÂ·ÓÉÆ÷±¾ÉíÊÇ·ñ×ß´úÀí£¬ÊÊÓÃÓÚÂ·ÓÉÆ÷¹ÒÔØBTÏÂÔØµÄÇé¿ö
+   ÄÚÍø·ÃÎÊ¿ØÖÆ                | ¿ÉÒÔ¿ØÖÆÄÚÍøÖÐÄÄÐ©IPÄÜ×ß´úÀí£¬ÄÄÐ©²»ÄÜ×ß´úÀí£¬¿ÉÒÔÖ¸¶¨ÏÂÃæÁÐ±íÄÚ»òÁÐ±íÍâIP
+   ÄÚÍøÖ÷»úÁÐ±í                | ÄÚÍøIPÁÐ±í£¬¿ÉÒÔÖ¸¶¨¶à¸ö
    
    
-   æœåŠ¡ç«¯é…ç½®ï¼š
+   ·þÎñ¶ËÅäÖÃ£º
 
-   é”®å           | æ•°æ®ç±»åž‹   | è¯´æ˜Ž
+   ¼üÃû           | Êý¾ÝÀàÐÍ   | ËµÃ÷
    ---------------|------------|-----------------------------------------------
-   enable         | å¸ƒå°”åž‹     | æ˜¯å¦å¯ç”¨æ­¤æœåŠ¡å™¨é…ç½®
-   server         | å­—ç¬¦ä¸²     | æœåŠ¡å™¨æœ¬æœºIPåœ°å€, ä¸€èˆ¬ä¸º0.0.0.0
-   server_port    | æ•°å€¼       | æœåŠ¡å™¨ç›‘å¬ç«¯å£å·, å°äºŽ 65535
-   timeout        | æ•°å€¼       | è¶…æ—¶æ—¶é—´ï¼ˆç§’ï¼‰, é»˜è®¤ 60
-   password       | å­—ç¬¦ä¸²     | æœåŠ¡ç«¯è®¾ç½®çš„å¯†ç 
-   encrypt_method | å­—ç¬¦ä¸²     | åŠ å¯†æ–¹å¼, [è¯¦æƒ…å‚è€ƒ][2]
-   protocol       | å­—ç¬¦ä¸²     | ä¼ è¾“åè®®ï¼Œé»˜è®¤"origin"[è¯¦æƒ…å‚è€ƒ][3]
-   obfs           | å­—ç¬¦ä¸²     | æ··æ·†æ’ä»¶ï¼Œé»˜è®¤"plain" [è¯¦æƒ…å‚è€ƒ][3]
-   obfs_param     | å­—ç¬¦ä¸²     | æ··æ·†æ’ä»¶å‚æ•° [è¯¦æƒ…å‚è€ƒ][3]
-   fast_open      | å¸ƒå°”åž‹     | TCPå¿«é€Ÿæ‰“å¼€ [è¯¦æƒ…å‚è€ƒ][3]
+   enable         | ²¼¶ûÐÍ     | ÊÇ·ñÆôÓÃ´Ë·þÎñÆ÷ÅäÖÃ
+   server         | ×Ö·û´®     | ·þÎñÆ÷±¾»úIPµØÖ·, Ò»°ãÎª0.0.0.0
+   server_port    | ÊýÖµ       | ·þÎñÆ÷¼àÌý¶Ë¿ÚºÅ, Ð¡ÓÚ 65535
+   timeout        | ÊýÖµ       | ³¬Ê±Ê±¼ä£¨Ãë£©, Ä¬ÈÏ 60
+   password       | ×Ö·û´®     | ·þÎñ¶ËÉèÖÃµÄÃÜÂë
+   encrypt_method | ×Ö·û´®     | ¼ÓÃÜ·½Ê½, [ÏêÇé²Î¿¼][2]
+   protocol       | ×Ö·û´®     | ´«ÊäÐ­Òé£¬Ä¬ÈÏ"origin"[ÏêÇé²Î¿¼][3]
+   obfs           | ×Ö·û´®     | »ìÏý²å¼þ£¬Ä¬ÈÏ"plain" [ÏêÇé²Î¿¼][3]
+   obfs_param     | ×Ö·û´®     | »ìÏý²å¼þ²ÎÊý [ÏêÇé²Î¿¼][3]
+   fast_open      | ²¼¶ûÐÍ     | TCP¿ìËÙ´ò¿ª [ÏêÇé²Î¿¼][3]
    
-   åœ¨æŸäº›openwrtä¸Šçš„kcptunå¯ç”¨åŽ‹ç¼©åŽå­˜åœ¨é—®é¢˜ï¼Œå› æ­¤åœ¨ç•Œé¢ä¸ŠåŠ ä¸Šäº†â€œ--nocompâ€å‚æ•°ï¼Œç¼ºçœä¸ºéžåŽ‹ç¼©ï¼Œè¯·åœ¨æœåŠ¡ç«¯ä¹Ÿä½¿ç”¨éžåŽ‹ç¼©æ¨¡å¼
+   ÔÚÄ³Ð©openwrtÉÏµÄkcptunÆôÓÃÑ¹Ëõºó´æÔÚÎÊÌâ£¬Òò´ËÔÚ½çÃæÉÏ¼ÓÉÏÁË¡°--nocomp¡±²ÎÊý£¬È±Ê¡Îª·ÇÑ¹Ëõ£¬ÇëÔÚ·þÎñ¶ËÒ²Ê¹ÓÃ·ÇÑ¹ËõÄ£Ê½
    
-   å¦‚è¦æ‰“å¼€kcptunçš„æ—¥å¿—ï¼Œå¯ä»¥åœ¨kcptunå‚æ•°æ å¡«å…¥"--nocomp --log /var/log/kcptun.log"ï¼Œæ—¥å¿—ä¼šä¿å­˜åœ¨æŒ‡å®šæ–‡ä»¶ä¸­
+   ÈçÒª´ò¿ªkcptunµÄÈÕÖ¾£¬¿ÉÒÔÔÚkcptun²ÎÊýÀ¸ÌîÈë"--nocomp --log /var/log/kcptun.log"£¬ÈÕÖ¾»á±£´æÔÚÖ¸¶¨ÎÄ¼þÖÐ
    
-   IPè·¯ç”±æ¨¡å¼çš„æ•°æ®æ–‡ä»¶ä¸º/etc/china_ssr.txt,åŒ…å«å›½å†…æ‰€æœ‰IPç½‘æ®µï¼Œä¸€èˆ¬å¾ˆå°‘å˜åŠ¨ï¼Œæ— éœ€æ›´æ–°ï¼Œå¦‚è¦æ›´æ–°ï¼Œè¯·åœ¨â€œçŠ¶æ€â€é¡µé¢æ›´æ–°
+   IPÂ·ÓÉÄ£Ê½µÄÊý¾ÝÎÄ¼þÎª/etc/china_ssr.txt,°üº¬¹úÄÚËùÓÐIPÍø¶Î£¬Ò»°ãºÜÉÙ±ä¶¯£¬ÎÞÐè¸üÐÂ£¬ÈçÒª¸üÐÂ£¬ÇëÔÚ¡°×´Ì¬¡±Ò³Ãæ¸üÐÂ
    
-   GFWåˆ—è¡¨æ¨¡å¼çš„æ•°æ®æ–‡ä»¶ä¸º/etc/dnsmasq.ssr/gfw_list.confï¼ŒåŒ…å«æ‰€æœ‰è¢«å¢™ç½‘ç«™ï¼Œå¦‚éœ€æ›´æ–°ï¼Œè¯·åœ¨â€œçŠ¶æ€â€é¡µé¢æ›´æ–°
+   GFWÁÐ±íÄ£Ê½µÄÊý¾ÝÎÄ¼þÎª/etc/dnsmasq.ssr/gfw_list.conf£¬°üº¬ËùÓÐ±»Ç½ÍøÕ¾£¬ÈçÐè¸üÐÂ£¬ÇëÔÚ¡°×´Ì¬¡±Ò³Ãæ¸üÐÂ
    
-   å¦‚æžœè¦è‡ªå®šä¹‰GFWè§„åˆ™ï¼Œåœ¨ç›®å½•/etc/dnsmasq.ssrä¸‹åˆ›å»ºä¸€ä¸ªæ–‡ä»¶ï¼Œåç§°ä»»å–ï¼Œæ¯”å¦‚myrules.confï¼Œåœ¨æ–‡ä»¶ä¸­æŒ‰è¦æ±‚è¾“å…¥ä½ éœ€è¦æ·»åŠ çš„ç½‘å€ï¼Œæ¯”å¦‚è¦æ·»åŠ google.com.hkï¼Œéœ€è¾“å…¥å¦‚ä¸‹ä¸¤è¡Œï¼š
+   Èç¹ûÒª×Ô¶¨ÒåGFW¹æÔò£¬ÔÚÄ¿Â¼/etc/dnsmasq.ssrÏÂ´´½¨Ò»¸öÎÄ¼þ£¬Ãû³ÆÈÎÈ¡£¬±ÈÈçmyrules.conf£¬ÔÚÎÄ¼þÖÐ°´ÒªÇóÊäÈëÄãÐèÒªÌí¼ÓµÄÍøÖ·£¬±ÈÈçÒªÌí¼Ógoogle.com.hk£¬ÐèÊäÈëÈçÏÂÁ½ÐÐ£º
    ```
    server=/.google.com.hk/127.0.0.1#5353
    ipset=/.google.com.hk/gfwlist
    ```
-   æ·»åŠ åŽæ‰§è¡Œ/etc/init.d/dnsmasq restarté‡å¯dnsmasq
+   Ìí¼ÓºóÖ´ÐÐ/etc/init.d/dnsmasq restartÖØÆôdnsmasq
    
-   å¹¿å‘Šè¿‡æ»¤ä¸ºGFWç‰ˆæœ¬ç‰¹æœ‰ï¼Œæ•°æ®æ–‡ä»¶ä¸º/etc/dnsmasq.ssr/ad.confï¼Œå…¶åŽŸç†æ˜¯å°†å¹¿å‘Šç½‘ç«™çš„IPåœ°å€è§£æžä¸º127.0.0.1ï¼Œä½¿ç”¨çš„æ•°æ®åº“ä¸ºeasylistchina+easylistï¼›å¹¿å‘Šè¿‡æ»¤æ¨¡å—ç¼ºçœæœªå®‰è£…ï¼Œç”¨æˆ·åœ¨â€œçŠ¶æ€â€é¡µé¢æ›´æ–°å¹¿å‘Šæ•°æ®åº“åŽè‡ªåŠ¨æ‰“å¼€ï¼Œå¦‚æ‰“å¼€å¹¿å‘Šè¿‡æ»¤åŽå‡ºçŽ°é—®é¢˜ï¼Œè¯·åˆ é™¤æ­¤æ–‡ä»¶å¹¶é‡å¯dnsmasq
+   ¹ã¸æ¹ýÂËÎªGFW°æ±¾ÌØÓÐ£¬Êý¾ÝÎÄ¼þÎª/etc/dnsmasq.ssr/ad.conf£¬ÆäÔ­ÀíÊÇ½«¹ã¸æÍøÕ¾µÄIPµØÖ·½âÎöÎª127.0.0.1£¬Ê¹ÓÃµÄÊý¾Ý¿âÎªeasylistchina+easylist£»¹ã¸æ¹ýÂËÄ£¿éÈ±Ê¡Î´°²×°£¬ÓÃ»§ÔÚ¡°×´Ì¬¡±Ò³Ãæ¸üÐÂ¹ã¸æÊý¾Ý¿âºó×Ô¶¯´ò¿ª£¬Èç´ò¿ª¹ã¸æ¹ýÂËºó³öÏÖÎÊÌâ£¬ÇëÉ¾³ý´ËÎÄ¼þ²¢ÖØÆôdnsmasq
    
-   è‡ªåŠ¨åˆ‡æ¢è¯´æ˜Žï¼šåœ¨æœåŠ¡å™¨é…ç½®ä¸­å¦‚æžœæŸäº›æœåŠ¡å™¨å¯ç”¨äº†è‡ªåŠ¨åˆ‡æ¢å¼€å…³ï¼Œè¿™äº›æœåŠ¡å™¨å°±ç»„æˆä¸€ä¸ªå¯ä»¥è‡ªåŠ¨åˆ‡æ¢çš„æœåŠ¡å™¨é›†åˆï¼Œå½“è¿™äº›æœåŠ¡å™¨ä¸­çš„æŸä¸€ä¸ªä½œä¸ºå…¨å±€æœåŠ¡å™¨ä½¿ç”¨ï¼Œå¹¶æ‰“å¼€äº†å…¨å±€è‡ªåŠ¨åˆ‡æ¢å¼€å…³æ—¶ï¼Œå¦‚æžœå…¨å±€æœåŠ¡å™¨æ•…éšœï¼Œä¼šè‡ªåŠ¨åœ¨é›†åˆä¸­å¯»æ‰¾å¯ç”¨çš„æœåŠ¡å™¨è¿›è¡Œåˆ‡æ¢ã€‚ä½ å¯ä»¥è®¾ç½®æ£€æµ‹å‘¨æœŸå’Œè¶…æ—¶æ—¶é—´ã€‚æ¯æ¬¡æ£€æµ‹æ—¶ä¼šåˆ¤æ–­ç¼ºçœæœåŠ¡å™¨æ˜¯å¦æ¢å¤æ­£å¸¸ï¼Œå¦‚æžœæ­£å¸¸ï¼Œä¼šè‡ªåŠ¨åˆ‡æ¢å›žç¼ºçœæœåŠ¡å™¨ã€‚æ³¨ï¼šè‡ªåŠ¨åˆ‡æ¢åŠŸèƒ½ä¾èµ–è·¯ç”±å™¨çš„æ£€æµ‹ï¼Œå› æ­¤åœ¨â€œè·¯ç”±å™¨è®¿é—®æŽ§åˆ¶â€ä¸­åº”è¯¥è®¾ç½®ä¸ºâ€œæ­£å¸¸ä»£ç†â€
+   ×Ô¶¯ÇÐ»»ËµÃ÷£ºÔÚ·þÎñÆ÷ÅäÖÃÖÐÈç¹ûÄ³Ð©·þÎñÆ÷ÆôÓÃÁË×Ô¶¯ÇÐ»»¿ª¹Ø£¬ÕâÐ©·þÎñÆ÷¾Í×é³ÉÒ»¸ö¿ÉÒÔ×Ô¶¯ÇÐ»»µÄ·þÎñÆ÷¼¯ºÏ£¬µ±ÕâÐ©·þÎñÆ÷ÖÐµÄÄ³Ò»¸ö×÷ÎªÈ«¾Ö·þÎñÆ÷Ê¹ÓÃ£¬²¢´ò¿ªÁËÈ«¾Ö×Ô¶¯ÇÐ»»¿ª¹ØÊ±£¬Èç¹ûÈ«¾Ö·þÎñÆ÷¹ÊÕÏ£¬»á×Ô¶¯ÔÚ¼¯ºÏÖÐÑ°ÕÒ¿ÉÓÃµÄ·þÎñÆ÷½øÐÐÇÐ»»¡£Äã¿ÉÒÔÉèÖÃ¼ì²âÖÜÆÚºÍ³¬Ê±Ê±¼ä¡£Ã¿´Î¼ì²âÊ±»áÅÐ¶ÏÈ±Ê¡·þÎñÆ÷ÊÇ·ñ»Ö¸´Õý³££¬Èç¹ûÕý³££¬»á×Ô¶¯ÇÐ»»»ØÈ±Ê¡·þÎñÆ÷¡£×¢£º×Ô¶¯ÇÐ»»¹¦ÄÜÒÀÀµÂ·ÓÉÆ÷µÄ¼ì²â£¬Òò´ËÔÚ¡°Â·ÓÉÆ÷·ÃÎÊ¿ØÖÆ¡±ÖÐÓ¦¸ÃÉèÖÃÎª¡°Õý³£´úÀí¡±
    
-   è‡ªåŠ¨åˆ‡æ¢å’Œè¿›ç¨‹ç›‘æŽ§çš„æ—¥å¿—å¯ä»¥åœ¨OpenWRTçš„â€œç³»ç»Ÿæ—¥å¿—â€ä¸­æŸ¥çœ‹
+   ×Ô¶¯ÇÐ»»ºÍ½ø³Ì¼à¿ØµÄÈÕÖ¾¿ÉÒÔÔÚOpenWRTµÄ¡°ÏµÍ³ÈÕÖ¾¡±ÖÐ²é¿´
    
-   GFWç‰ˆæœ¬ç¼ºçœä½¿ç”¨DNSéš§é“ï¼ˆUDPï¼‰æ–¹å¼è§£æžåŸŸåï¼Œè¦æ±‚SS/SSRæœåŠ¡å™¨æ”¯æŒUDPè½¬å‘ã€‚å¦‚æžœæœåŠ¡å™¨ä¸æ”¯æŒUDPè½¬å‘æˆ–UDPæ–¹å¼çš„è§£æžå­˜åœ¨é—®é¢˜ï¼Œå¯ä»¥ä½¿ç”¨Pdnsdï¼Œä»¥TCPæ–¹å¼æ¥è¿›è¡ŒDNSåŸŸåè§£æžã€‚ç”¨æˆ·éœ€è‡ªè¡Œå®‰è£…pdnsdï¼Œå®‰è£…åŽä¼šåœ¨å®¢æˆ·ç«¯ç•Œé¢å‡ºçŽ°â€œDNSè§£æžæ–¹å¼â€é€‰æ‹©é¡¹ï¼Œå¯ä»¥é€‰æ‹©â€œä½¿ç”¨pdnsdæ–¹å¼â€æ¥è§£æžï¼Œpdnsdç¼ºçœç”¨TCPæ¨¡å¼è§£æžï¼Œç”¨æˆ·å¯ä»¥è®¾ç½®DNSæœåŠ¡å™¨åœ°å€å’Œç«¯å£ï¼Œè®¾ç½®çš„DNSæœåŠ¡å™¨éœ€æ”¯æŒTCPæ–¹å¼æŸ¥è¯¢
+   GFW°æ±¾È±Ê¡Ê¹ÓÃDNSËíµÀ£¨UDP£©·½Ê½½âÎöÓòÃû£¬ÒªÇóSS/SSR·þÎñÆ÷Ö§³ÖUDP×ª·¢¡£Èç¹û·þÎñÆ÷²»Ö§³ÖUDP×ª·¢»òUDP·½Ê½µÄ½âÎö´æÔÚÎÊÌâ£¬¿ÉÒÔÊ¹ÓÃPdnsd£¬ÒÔTCP·½Ê½À´½øÐÐDNSÓòÃû½âÎö¡£ÓÃ»§Ðè×ÔÐÐ°²×°pdnsd£¬°²×°ºó»áÔÚ¿Í»§¶Ë½çÃæ³öÏÖ¡°DNS½âÎö·½Ê½¡±Ñ¡ÔñÏî£¬¿ÉÒÔÑ¡Ôñ¡°Ê¹ÓÃpdnsd·½Ê½¡±À´½âÎö£¬pdnsdÈ±Ê¡ÓÃTCPÄ£Ê½½âÎö£¬ÓÃ»§¿ÉÒÔÉèÖÃDNS·þÎñÆ÷µØÖ·ºÍ¶Ë¿Ú£¬ÉèÖÃµÄDNS·þÎñÆ÷ÐèÖ§³ÖTCP·½Ê½²éÑ¯
    
-   å®˜æ–¹æ–°ç‰ˆæœ¬ä¸­å·²ç»å–æ¶ˆäº†pdnsdçš„ä¸‹è½½ï¼Œå¦‚è¦ä¸‹è½½ï¼Œè¯·åœ¨14.07ç‰ˆæœ¬ä¸­æŸ¥æ‰¾ï¼Œå¦‚ar71xxçš„ä¸‹è½½åœ°å€ä¸ºï¼š
+   ¹Ù·½ÐÂ°æ±¾ÖÐÒÑ¾­È¡ÏûÁËpdnsdµÄÏÂÔØ£¬ÈçÒªÏÂÔØ£¬ÇëÔÚ14.07°æ±¾ÖÐ²éÕÒ£¬Èçar71xxµÄÏÂÔØµØÖ·Îª£º
    http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/oldpackages/pdnsd_1.2.9a-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d_ar71xx.ipk
    
-   å®˜æ–¹opensslçš„ipkåœ¨ç¼–è¯‘æ—¶åŽ»é™¤äº†camelliaå’ŒideaåŠ å¯†ç®—æ³•ï¼Œå¦‚æžœä½¿ç”¨å®˜æ–¹çš„libopensslï¼Œå°†æ— æ³•ä½¿ç”¨è¿™ä¸¤ç§åŠ å¯†æ–¹å¼ï¼Œå¦‚éœ€ä½¿ç”¨ï¼Œè¯·é‡æ–°ç¼–è¯‘opensslè¿›è¡Œæ›¿æ¢
+   ¹Ù·½opensslµÄipkÔÚ±àÒëÊ±È¥³ýÁËcamelliaºÍidea¼ÓÃÜËã·¨£¬Èç¹ûÊ¹ÓÃ¹Ù·½µÄlibopenssl£¬½«ÎÞ·¨Ê¹ÓÃÕâÁ½ÖÖ¼ÓÃÜ·½Ê½£¬ÈçÐèÊ¹ÓÃ£¬ÇëÖØÐÂ±àÒëopenssl½øÐÐÌæ»»
 
 
-é—®é¢˜å’Œå»ºè®®åé¦ˆ
+ÎÊÌâºÍ½¨Òé·´À¡
 ---
-è¯·ç‚¹å‡»æœ¬é¡µé¢ä¸Šçš„â€œIssuesâ€åé¦ˆä½¿ç”¨é—®é¢˜æˆ–å»ºè®®
+Çëµã»÷±¾Ò³ÃæÉÏµÄ¡°Issues¡±·´À¡Ê¹ÓÃÎÊÌâ»ò½¨Òé
 
-æˆªå›¾  
+½ØÍ¼  
 ---
-å®¢æˆ·ç«¯ï¼š
+¿Í»§¶Ë£º
 
 ![luci000](http://iytc.net/img/ssr9.jpg)
 
-æœåŠ¡ç«¯ï¼š
+·þÎñ¶Ë£º
 
 ![luci000](http://iytc.net/img/ssr82.jpg)
 
-çŠ¶æ€é¡µé¢ï¼š
+×´Ì¬Ò³Ãæ£º
 
 ![luci000](http://iytc.net/img/ssr120.jpg)
 
